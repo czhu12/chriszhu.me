@@ -47,7 +47,7 @@ function Projects() {
     <div className="content mt-5 pt-5">
       <h1 className="text-info">Projects</h1>
       <ReactMarkdown children={markdown} />
-      <h4 className="mt-5 mb-3">Featured Projects</h4>
+      <h4 className="font-weight-light mt-5 mb-3">Featured Projects</h4>
       {PROJECTS.map(project => {
         return (
           <ProjectCard project={project} />
