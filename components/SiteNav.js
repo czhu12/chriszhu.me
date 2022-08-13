@@ -1,15 +1,15 @@
+import { useRouter } from 'next/router';
 import { Nav } from 'react-bootstrap'
 
 export default function SiteNav() {
-  let href = typeof window !== 'undefined' ? window.location.pathname : '/';
-  console.log(href);
+  const router = useRouter();
   return (
-    <Nav>
+    <Nav activeKey={router.pathname}>
       <Nav.Item as="li">
-        <Nav.Link href="/" className={href === '/' && 'active'}>About</Nav.Link>
+        <Nav.Link href="/"><span>About</span></Nav.Link>
       </Nav.Item>
       <Nav.Item as="li">
-        <Nav.Link href="/projects" className={href === '/projects' && 'active'}>Projects</Nav.Link>
+        <Nav.Link href="/projects"><span>Projects</span></Nav.Link>
       </Nav.Item>
     </Nav>
   );
