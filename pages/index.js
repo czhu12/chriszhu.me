@@ -24,7 +24,7 @@ function PublicationCard({publication}) {
   return (
     <a target="_blank" className="link-unstyled" href={publication.url}>
       <div className="ccard">
-        <h2>{publication.name}</h2>
+        <h2><i>{publication.name}</i></h2>
         <p>{publication.publisher}</p>
         <p className="mt-3">
           {publication.claps} <i class="fa-solid fa-hands-clapping"></i>
