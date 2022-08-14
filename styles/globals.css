@@ -89,6 +89,9 @@ a:hover {
 .link-unstyled {
   color: white !important;
 }
+.link-unstyled:hover {
+  text-decoration: none !important;
+}
 
 .ccard {
   cursor: pointer;
@@ -106,6 +109,7 @@ a:hover {
 .ccard:active {
   background-color: #ffffff33;
 }
+
 
 .ccard h2 {
   margin: 0 0 1rem 0;
