@@ -5,10 +5,10 @@ function Home() {
   return (
     <div className="content">
       <h1>Chris Zhu</h1>
-      <div>CTO & Cofounder @ Primary.Health (We're hiring!)</div>
+      <div>CTO & Cofounder @ <a href="https://www.linkedin.com/company/primaryhealth">Primary.Health (We're hiring!)</a></div>
       <div className="my-2">
         I currently live in San Francisco, and grew up in Vancouver, Canada 🇨🇦.
-        Find my writings on <a href="https://medium.com/@chriszhu12">Software</a>, <a href="https://chriszhu.substack.com/">Climate Change</a>.
+        Find my writings on <a href="https://medium.com/@chriszhu12">Software</a> and musings on <a href="https://chriszhu.substack.com/">Climate Change</a>.
         <h4 className="font-weight-light mt-5 mb-3">Career</h4>
         <p className="mt-3">
           <b>Cofounder & CTO</b>

@@ -68,21 +68,24 @@ main {
   background-color: var(--bs-secondary);
   color: var(--bs-light);
 }
+
 a {
   color: var(--bs-secondary);
 }
+
 a:hover {
   color: var(--bs-light);
 }
 
 .content a {
-  color: var(--bs-gray);
+  color: var(--bs-red);
   transition: all 0.5s ease;
 }
 
 .content a:hover {
-  color: var(--bs-teal);
+  text-decoration: underline;
 }
+
 .link-unstyled {
   color: white !important;
 }
