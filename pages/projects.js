@@ -38,6 +38,13 @@ const PROJECTS = [
     url: "https://m.mage.ai/light-bulb-machine-learning-made-easy-8bdc17845c0f",
     stars: 22,
   },
+  {
+    name: "Torch Transforms Builder",
+    icon: "fa-solid fa-helmet-safety",
+    description: "Visualize what torchvision transforms look like without having to write scripts.",
+    url: "https://pytorch-transforms-builder.chriszhu.me/",
+    stars: 15,
+  },
 ]
 const markdown = `
 I spend a lot of time building in open source. Here are some of the more popular ones.
