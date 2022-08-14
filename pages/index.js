@@ -68,7 +68,7 @@ function Home() {
           </p>
         </div>
       </div>
-      <h4 className="font-weight-light mt-5 mb-3">Published</h4>
+      <h4 className="font-weight-light mt-5">Published</h4>
       <div>
         {PUBLICATIONS.map(publication => {
           return (
