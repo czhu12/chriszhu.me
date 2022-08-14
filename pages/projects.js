@@ -18,6 +18,13 @@ function ProjectCard({ project }) {
 
 const PROJECTS = [
   {
+    name: "Toolkit",
+    icon: "fa-solid fa-toolbox",
+    description: "Toolkit turn your scripts into full blown apps. No HTML or CSS required",
+    url: "https://www.trytoolkit.com/",
+    stars: 15,
+  },
+  {
     name: "React Importer",
     icon: "fa-solid fa-file-import",
     description: "A CSV importer flow for React projects",
