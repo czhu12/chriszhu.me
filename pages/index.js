@@ -42,6 +42,10 @@ function Home() {
       <div className="my-2">
         I currently live in San Francisco, and grew up in Vancouver, Canada 🇨🇦.
         Find my writings on <a href="https://medium.com/@chriszhu12">Software</a> and musings on <a href="https://chriszhu.substack.com/">Climate Change</a>.
+        <p className="text-muted">
+          See my latest talk at Next Generation Summit DX <a href="https://chi-cloud.s3.amazonaws.com/EncoreOnDemand/ADX22/d3/W-C1B-TBA-Chris-Zhu-1115.mp4">here</a>, find the slides <a href="/assets/primary-health-conference-presentation.pptx">here</a>.
+        </p>
+
         <h4 className="font-weight-light mt-5 mb-3">Career</h4>
         <div style={{paddingLeft: "2em"}}>
           <p className="mt-3">
