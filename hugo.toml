@@ -1,0 +1,47 @@
+baseURL = "https://chriszhu.me/"
+locale = "en-us"
+title = "Chris Zhu"
+copyright = "© Chris Zhu"
+titleCaseStyle = "none"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)'], ['$', '$']]
+
+[markup.highlight]
+  noClasses = true
+  style = "github-dark"
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+
+[params]
+  description = "Engineer. Cofounder & CTO at Primary.Health. Building Canine, an open source Heroku alternative."
+  github = "czhu12"
+  linkedin = "chris-zhu"
+
+[[menu.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 2
+
+[[menu.main]]
+  name = "Archive"
+  pageRef = "/posts"
+  weight = 3
+
+[[menu.main]]
+  name = "Tags"
+  pageRef = "/tags"
+  weight = 4

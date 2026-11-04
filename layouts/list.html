@@ -1,0 +1,14 @@
+{{ define "main" }}
+<header>
+  <h1>{{ if eq .Kind "term" }}#{{ end }}{{ .Title }}</h1>
+</header>
+{{ .Content }}
+{{ range .Pages.GroupByDate "2006" }}
+<section>
+  <h2>{{ .Key }}</h2>
+  <ul class="item-list">
+    {{ range .Pages }}{{ partial "post-item.html" . }}{{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

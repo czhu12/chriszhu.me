@@ -1,0 +1,32 @@
+{{ define "main" }}
+<header class="intro">
+  <h1>{{ site.Title }}</h1>
+  <p>{{ site.Params.description }}</p>
+</header>
+
+{{ .Content }}
+
+<section>
+  <div class="section-header">
+    <h2>Latest posts</h2>
+    <a href="{{ "posts" | relURL }}">View archive →</a>
+  </div>
+  <ul class="item-list">
+    {{ range first 10 (where site.RegularPages "Section" "posts") }}
+    {{ partial "post-item.html" . }}
+    {{ end }}
+  </ul>
+</section>
+
+<section>
+  <div class="section-header">
+    <h2>Projects</h2>
+  </div>
+  <ul class="item-list">
+    <li class="item">
+      <h3 class="item-title"><a href="https://github.com/CanineHQ/canine">Canine</a></h3>
+      <p class="meta">Open source Heroku alternative for self-hosting apps on Kubernetes. <a href="https://canine.sh">canine.sh</a></p>
+    </li>
+  </ul>
+</section>
+{{ end }}

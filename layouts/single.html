@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="post">
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "posts" }}{{ partial "meta.html" . }}{{ end }}
+  </header>
+
+  {{ if .Params.toc }}
+  <details class="toc" open>
+    <summary>Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+  {{ end }}
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
