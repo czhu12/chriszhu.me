@@ -1,0 +1,26 @@
+{{ define "main" }}
+<header>
+  <h1>{{ .Title }}</h1>
+</header>
+{{ .Content }}
+
+{{ range hugo.Data.projects }}
+{{ $name := .name }}
+<section class="project">
+  <h2>{{ with .url | default .repo }}<a href="{{ . }}">{{ end }}{{ .name }}{{ if .url | default .repo }}</a>{{ end }}</h2>
+  <p class="meta">
+    {{ with .url }}<a href="{{ . }}">{{ strings.TrimPrefix "https://" . }}</a>{{ end }}
+    {{ if and .url .repo }} · {{ end }}
+    {{ with .repo }}<a href="{{ . }}">source</a>{{ end }}
+  </p>
+  {{ (.about | default .summary) | markdownify | printf "<p>%s</p>" | safeHTML }}
+  {{ with .youtube }}
+  <div class="video">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="{{ $name }} video" loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  {{ end }}
+</section>
+{{ end }}
+{{ end }}

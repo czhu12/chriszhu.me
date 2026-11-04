@@ -1,0 +1,54 @@
+# Bookshelf, rendered at /bookshelf in the order listed.
+#
+# Fields:
+#   title   (required, quote it if it contains a colon)
+#   author  (required)
+#   isbn    cover is fetched from Open Library at build time
+#   cover   overrides the ISBN lookup: a path under assets/ (e.g. covers/foo.jpg)
+#           or a full image URL
+#   url     where the title links to
+#   note    a line or two about the book
+
+- title: "Being Mortal"
+  author: Atul Gawande
+  isbn: "9780805095159"
+
+- title: "The Emperor of All Maladies"
+  author: Siddhartha Mukherjee
+  isbn: "9781439107959"
+
+- title: "Mistborn: The Final Empire"
+  author: Brandon Sanderson
+  isbn: "9780765311788"
+
+- title: "The Three-Body Problem"
+  author: Cixin Liu
+  isbn: "9780765382030"
+
+- title: "The Remains of the Day"
+  author: Kazuo Ishiguro
+  isbn: "9780679731726"
+
+- title: "All the Light We Cannot See"
+  author: Anthony Doerr
+  isbn: "9781476746586"
+
+- title: "Project Hail Mary"
+  author: Andy Weir
+  isbn: "9780593135204"
+
+- title: "The Guns of August"
+  author: Barbara W. Tuchman
+  isbn: "9780345476098"
+
+- title: "A Thousand Splendid Suns"
+  author: Khaled Hosseini
+  isbn: "9781594489501"
+
+- title: "A Gentleman in Moscow"
+  author: Amor Towles
+  isbn: "9780670026197"
+
+- title: "Table for Two"
+  author: Amor Towles
+  isbn: "9780593296370"

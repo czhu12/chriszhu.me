@@ -1,0 +1,51 @@
+# Projects, rendered on the home page (name + summary) and at /projects
+# (everything) in the order listed.
+#
+# Fields:
+#   name     (required)
+#   summary  (required) one line, shown on the home page
+#   url      the project's site
+#   repo     source code link
+#   about    a longer description for /projects, Markdown allowed
+#   youtube  a YouTube video ID, embedded on /projects
+
+- name: Canine
+  summary: Open source Heroku alternative for self-hosting apps on Kubernetes.
+  url: https://canine.sh
+  repo: https://github.com/CanineHQ/canine
+  about: >-
+    A developer-friendly PaaS for your own Kubernetes cluster. Canine handles the
+    whole lifecycle of shipping an app: dev servers, hosting, error tracking, MCP
+    endpoints, and more. Use the hosted version at [canine.sh](https://canine.sh)
+    or run it yourself.
+
+- name: tui2web
+  summary: Stream any terminal app to a private web link, so you can check on coding agents from your phone.
+  url: https://tui2web.com
+  repo: https://github.com/czhu12/tui2web
+  about: >-
+    Run `tui2web claude` (or any other command) and get a link that shows the live
+    session in a browser, with two-way input and phone-friendly keys like Esc, Tab,
+    and Ctrl. Connections are outbound-only, so there are no ports to open, and you
+    can self-host the relay or keep everything on your Tailscale network.
+    MIT licensed, installed with `npm install -g tui2web`.
+
+- name: Mintables
+  summary: No-code tool for generating, deploying, and minting NFT collections. A hobby project.
+  url: https://mintables.club
+  youtube: QQ1qpvrER5o
+  about: >-
+    Started at a hackathon in 2021 as a way to make a 10,000-piece NFT collection
+    without writing code. You upload layers of artwork (backgrounds, bodies, hats),
+    set how rare each trait is, and it generates every combination along with the
+    marketplace metadata. It has since grown to deploy the smart contract and host
+    a minting page for you on Ethereum or Polygon. The video walks through building
+    Dino Bros, a collection of pixel dinosaurs I made with it.
+
+- name: Light Bulb
+  summary: Label data, then train, test, and deploy ML models without writing code.
+  repo: https://github.com/czhu12/light_bulb
+
+- name: Mockachino
+  summary: Get a mock API up and running in seconds.
+  repo: https://github.com/czhu12/mockachino

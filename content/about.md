@@ -8,7 +8,7 @@ Hi, I'm Chris. I write software, mostly the kind that removes work from people's
 
 I'm the cofounder and CTO of [Primary.Health](https://primary.health), where we build tools that let healthcare providers deliver clinical services outside the clinic. Better workflows, integrations, and AI-driven automation let a single provider care for a much larger population. Over the past five years, more than 100,000 providers have used it to deliver care to 14 million patients, for everything from COVID and STIs to HIV, diabetes, and RSV. We bootstrapped the company the whole way.
 
-On the side, I work on [Canine](https://github.com/CanineHQ/canine), an open source Heroku alternative. It gives developers a full toolkit for self-hosting apps on Kubernetes: dev servers, app hosting, error tracking, MCP endpoints, and more. There's also a hosted version at [canine.sh](https://canine.sh).
+On the side, I work on [Canine](https://github.com/CanineHQ/canine), an open source Heroku alternative. It gives developers a full toolkit for self-hosting apps on Kubernetes: dev servers, app hosting, error tracking, MCP endpoints, and more. There's also a hosted version at [canine.sh](https://canine.sh). A few other things I've built are on the [projects](/projects/) page.
 
 ## Before
 

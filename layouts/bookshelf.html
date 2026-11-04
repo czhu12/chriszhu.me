@@ -1,0 +1,35 @@
+{{ define "main" }}
+<header>
+  <h1>{{ .Title }}</h1>
+</header>
+{{ .Content }}
+
+<ul class="bookshelf">
+  {{ range hugo.Data.books }}
+  {{ $src := .cover | default (cond (isset . "isbn") (printf "https://covers.openlibrary.org/b/isbn/%s-L.jpg?default=false" (string .isbn)) "") }}
+  {{ $img := "" }}
+  {{ if hasPrefix $src "http" }}
+    {{ with try (resources.GetRemote $src) }}
+      {{ with .Err }}{{ warnf "bookshelf: cover fetch failed for %q: %s" $src . }}{{ else with .Value }}{{ $img = . }}{{ end }}
+    {{ end }}
+  {{ else if $src }}
+    {{ $img = resources.Get $src }}
+    {{ if not $img }}{{ warnf "bookshelf: cover %q not found under assets/" $src }}{{ end }}
+  {{ end }}
+  <li class="book">
+    {{ $title := .title }}
+    {{ with .url }}<a href="{{ . }}">{{ end }}
+    {{ with $img }}
+      {{ $thumb := .Resize "400x jpg q80" }}
+      <img class="book-cover" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="Cover of {{ $title }}" loading="lazy">
+    {{ else }}
+      <span class="book-cover book-cover-blank">{{ $title }}</span>
+    {{ end }}
+    {{ with .url }}</a>{{ end }}
+    <p class="book-title">{{ with .url }}<a href="{{ . }}">{{ $title }}</a>{{ else }}{{ $title }}{{ end }}</p>
+    <p class="meta">{{ .author }}</p>
+    {{ with .note }}<p class="book-note">{{ . | markdownify }}</p>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

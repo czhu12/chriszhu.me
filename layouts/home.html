@@ -6,27 +6,30 @@
 
 {{ .Content }}
 
+{{ with first 10 (where site.RegularPages "Section" "posts") }}
 <section>
   <div class="section-header">
     <h2>Latest posts</h2>
     <a href="{{ "posts" | relURL }}">View archive →</a>
   </div>
   <ul class="item-list">
-    {{ range first 10 (where site.RegularPages "Section" "posts") }}
-    {{ partial "post-item.html" . }}
-    {{ end }}
+    {{ range . }}{{ partial "post-item.html" . }}{{ end }}
   </ul>
 </section>
+{{ end }}
 
 <section>
   <div class="section-header">
     <h2>Projects</h2>
+    <a href="{{ "projects" | relURL }}">More about them →</a>
   </div>
   <ul class="item-list">
+    {{ range hugo.Data.projects }}
     <li class="item">
-      <h3 class="item-title"><a href="https://github.com/CanineHQ/canine">Canine</a></h3>
-      <p class="meta">Open source Heroku alternative for self-hosting apps on Kubernetes. <a href="https://canine.sh">canine.sh</a></p>
+      <h3 class="item-title"><a href="{{ .url | default .repo }}">{{ .name }}</a></h3>
+      <p class="meta">{{ .summary }}</p>
     </li>
+    {{ end }}
   </ul>
 </section>
 {{ end }}

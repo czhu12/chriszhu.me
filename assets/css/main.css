@@ -143,3 +143,40 @@ th { text-align: inherit; }
 
 .footnotes { margin-top: 3rem; font-size: 0.9rem; border-top: 1px solid var(--border); }
 .footnotes hr { display: none; }
+
+/* bookshelf */
+.bookshelf {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 2rem var(--gap);
+}
+.book p { margin: 0; }
+.book-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.5ch;
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+.book-cover-blank {
+  display: grid;
+  place-items: center;
+  padding: 1ch;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--code-bg);
+}
+.book-title { font-weight: 700; line-height: 1.4; }
+.book-note { font-size: 0.85rem; color: var(--muted); line-height: 1.5; margin-top: 0.25rem !important; }
+
+/* projects */
+.project h2 { margin-bottom: 0.25rem; }
+.project > p:not(.meta) { margin-top: 0.75rem; }
+.video { margin-block: 1.5rem; }
+.video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 1ch; }
